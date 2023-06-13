@@ -1,0 +1,53 @@
+for 문
+반복문의 가장 기본적인 문법
+for ([initialization]; [condition]; [final-expression]) { statement }
+
+initialization
+초기화할 변수, var나 let으로 선언이 가능하며, var로 선언시 반복문 밖에서도 반복문이 적용된 변수 사용이 가능하고, let으로 선언시
+반복문 안에서만 반복문이 적용된 변수 사용이 가능하다.
+
+condition
+반복문 실행시 반복문 실행 회수를 설정하는 개념을 가짐
+
+final-expression
+반복문 실행시 수행할 조건
+
+while 문
+while 문은 조건이 true일 때 실행된다. 반복문이 실행되기 전에 조건이 true인지 false인지 확인을 한다.
+조건이 true일 경우 while문이 실행된다. 반복문 실행전 조건이 false인 경우 실행을 하지 않으며,
+반복문 실행 중 조건이 false가 되면 실행을 멈춘다.
+주의할 점: 아래 식으로 실행할 경우 작동이 된다... 다만 x(0)+n(0)=0이므로 절대 3이 되는 경우가 생기지 않아 무한 반복이 
+진행되어 오류를 발생시킨다.
+var n = 0;
+var x = 0;
+
+while (n < 3) {
+  x += n;
+} 
+
+
+for과 while의 사용법
+while은 조건밖에 없기 때문에 몇 번 반복될 지 모를 때 주로 사용되고, 
+ for문은 반복 횟수를 정할 수 있기 때문에 몇 번 반복될 지 알 때 주로 사용된다.
+
+
+
+
+forEach
+for 반복문과는 다르게 배열을 사용하는 방식으로 함수를 사용한다.
+for문 보다 코드가 간결하게 완성된다.
+일반적인 for문보다 forEach문이 내장함수 이기 때문에 속도가 더 빠르다.
+number.forEach((c) => console.log(c))
+
+
+
+
+https://meanbymin.tistory.com/57
+
+
+
+
+
+
+
+
