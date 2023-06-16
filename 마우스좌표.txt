@@ -1,0 +1,16 @@
+pageX, pageY
+전체 문서를 기준으로 한 좌표를 표시한다.
+만약 문서를 스크롤을 하면 특정 지점의 pageY의 좌표값은 페이지가 스크롤 될 때마다 변경이 된다.
+
+clientX, clientY
+브라우저에서 사용자에게 보여지는 웹 사이트가 보여지는 영역을 기준으로 좌표를 표시한다.
+스크롤을 하더라도 특정 지점의 client의 값은 동일하다.(절대위치)
+
+
+
+offsetY
+jQuery: pageY - objectOffsetTop
+js : clientY - box.getBoundingclientrect().width
+
+
+getBoundingclientrect() 브라우저 기준으로 작동

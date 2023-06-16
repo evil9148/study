@@ -1,0 +1,107 @@
+/* 커서를 이미지로 대체
+* {
+  cursor: url(../img/pencil.png) 0 40, pointer;
+}
+a,
+button {
+  cursor: url(../img/pencil-hover.png) 0 40, pointer;
+}
+
+*/
+
+* {
+  cursor: none;
+}
+
+button:hover,
+a:hover {
+  color: pink;
+}
+
+body {
+  background-color: #fff;
+}
+
+@media (hover: hover) {
+  .cur {
+    pointer-events: none;
+    mix-blend-mode: difference;
+    opacity: 0;
+    position: fixed;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 1px solid #fff;
+    transition: transform 0.5s;
+    &.beat {
+      
+      animation: beat 1s linear infinite;
+      @keyframes beat {
+        0% {
+          transform: scale(0) translate(-50%, -50%);
+        }
+        10% {
+          transform: scale(0.2) translate(-50%, -50%);
+        }
+        20% {
+          transform: scale(0.4) translate(-50%, -50%);
+        }
+        30% {
+          transform: scale(0.6) translate(-50%, -50%);
+        }
+        40% {
+          transform: scale(0.8) translate(-50%, -50%);
+        }
+        50% {
+          transform: scale(1) translate(-50%, -50%);
+        }
+        60% {
+          transform: scale(0.8) translate(-50%, -50%);
+        }
+        70% {
+          transform: scale(0.6) translate(-50%, -50%);
+        }
+        80% {
+          transform: scale(0.4) translate(-50%, -50%);
+        }
+        90% {
+          transform: scale(0.2) translate(-50%, -50%);
+        }
+        100% {
+          transform: scale(0) translate(-50%, -50%);
+        }
+      }
+    }
+    &::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  }
+}
+
+.ex1 {
+  position: fixed;
+  width: 300px;
+  top: 0;
+  right: 0;
+  background-color: rgba(#000, 0.2);
+}
+
+.ex2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  background-color: teal;
+  margin: 30px auto;
+}
