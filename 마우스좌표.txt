@@ -1,14 +1,24 @@
 pageX, pageY
-전체 문서를 기준으로 한 좌표를 표시한다.
-만약 문서를 스크롤을 하면 특정 지점의 pageY의 좌표값은 페이지가 스크롤 될 때마다 변경이 된다.
+전체 문서를 기준으로 한 좌표 정보를 담고 있다.
+스크롤로 인해서 보이지 않게된 화면의 영역까지 포함해서 측정한다 .
+pageX : 전체 문서 내에서 마우스의 X좌표의 정보를 담고 있다.
+pageY : 전체 문서 내에서 마우스의 Y좌표의 정보를 담고 있다.
 
 clientX, clientY
-브라우저에서 사용자에게 보여지는 웹 사이트가 보여지는 영역을 기준으로 좌표를 표시한다.
+클라이언트 영역 내에서 마우스의 좌표 정보를 담고 있다.
+클라이언트 영역은 이벤트가 발생한 브라우저 뷰포트를 말하며 화면에 보여지는 부분을 말한다.
+clientX : 브라우저 뷰포트 기준으로 마우스의 X좌표의 정보를 담고 있다.
+clientY : 브라우저 뷰포트 기준으로 마우스의 Y좌표의 정보를 담고 있다.
 스크롤을 하더라도 특정 지점의 client의 값은 동일하다.(절대위치)
 
+offsetX, offsetY
+요소영역 내에서 마우스의 좌표 정보를 담고 있다. 
+offsetX : 요소영역 기준으로 마우스의 X좌표의 정보를 담고 있다.
+offsetY : 요소영역 기준으로 마우스의 Y좌표의 정보를 담고 있다.
 
+getBoundingClientRect()
+jquery의 offset와 innerWidth와 innerHeight 같은 기능을 보여준다.
 
-offsetY
 jQuery: pageY - objectOffsetTop
 js : clientY - box.getBoundingclientrect().width
 
