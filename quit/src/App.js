@@ -16,7 +16,9 @@ function App() {
   const [_disabled, _setDisabled] = useState('')
 
   const fnSetTime = (startStamp) => {
+    console.log(startStamp);
     let quitStamp = Date.now() - startStamp
+    console.log(quitStamp);
     let quitTime = parseInt(quitStamp / 1000)
     let remain
     let quitDays = parseInt(quitTime / (60 * 60 * 24))
@@ -29,19 +31,19 @@ function App() {
     quitMin = (quitMin < 10) ? '0' + quitMin : quitMin
     let quitSec = parseInt(remain % 60)
     quitSec = (quitSec < 10) ? '0' + quitSec : quitSec
-    console.log(quitSec);
+
 
     return { quitDays, quitHour, quitMin, quitSec }
   }
 
   const fnStartClick = () => {
-    let startStamp = Date.now()
+    let startStamp = new Date()
     if (window.localStorage.getItem('quitStampStorage')) {
       fnSetTime(JSON.parse(window.localStorage.getItem('quitStampStorage')))
     } else {
-      fnSetTime(startStamp)
+      fnSetTime(startStamp.getTime())
     }
-
+    console.log(startStamp.getTime());
   }
 
 
