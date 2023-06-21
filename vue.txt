@@ -1,0 +1,15 @@
+npm install -g @vue/cli 뷰 설치
+vue -V 버전확인
+vue create . 현재 폴더에서 설치시 입력
+y엔터
+ver 3 enter
+
+익스텐션 설치
+Vetur - Pine Wu
+
+jsconfig.json 파일에서
+"include": ["./src/**/*"], 를 입력
+
+vue는 절대경로를 "<%= BASE_URL %>favicon.ico"> 이렇게 사용
+
+npm run serve = npm start
